@@ -18,8 +18,7 @@ import Shop from '../components/TiendaPokeComponent';
 
 Vue.use(VueRouter)
 
-let auth = store.getters.isAuthenticated;
-console.log(auth, 'hi')
+
 
 const router = new VueRouter({
     mode:'history',
@@ -45,19 +44,25 @@ const router = new VueRouter({
     
 })
 
+let auth = store.getters.isAuthenticated;
+console.log(auth, 'what?')
+
  router.beforeEach( (to, from, next) => {
 
   console.log(store.getters.isAuthenticated)
   if (to.matched.some(record => record.meta.requiresAuth)) {  
         
       if (!localStorage.getItem('who')){
+           console.log(auth, 'tologin?')
            next('login')
+          
       } 
       else{ 
         next()
       }
   } else if (to.matched.some(record => record.meta.requiresVisitor)) {
       if (localStorage.getItem('who')) {
+        console.log(auth, 'tohome?')
         next('home')
       } else {
         next()

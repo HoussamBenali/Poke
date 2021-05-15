@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{ secure_asset("css/app.css") }}">
     <link rel="stylesheet" href="{{ secure_asset("css/style.css") }}"><
-    title>Módulo admin</title>
+    <title>Módulo admin</title>
 </head>
 
 <body>

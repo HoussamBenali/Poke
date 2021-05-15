@@ -53,7 +53,7 @@ export default {
         ATK:{},
         DEF: {},
         SPD: {},
-        HpBar: {},
+        HPBar: {},
         maxHP: {},
         Rarity:{}
     },
@@ -67,7 +67,9 @@ export default {
                 else if(this.HP >= 0.3*this.maxHP){
                     color = '#ff9012';
                 }
-
+                console.log(this.Player)
+                console.log(this.maxHP, 'maxHP')
+                console.log(this.HP, 'HP')
                 var percent=this.HP/this.maxHP*100
                 percent = Math.round(percent)
                 console.log(percent, 'percent')
