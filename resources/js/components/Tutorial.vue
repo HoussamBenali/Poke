@@ -44,7 +44,6 @@
 <script>
 import axios from 'axios';
 import Card from './Card';
-import store from '../store/store'
 import Vue from 'vue';
 
 export default {
@@ -145,7 +144,7 @@ methods: {
       },
       
       Fainted(poke){
-        if(poke.HP <= 0){
+        if(poke.hp <= 0){
             return true
         } else{
             return false
@@ -181,6 +180,8 @@ methods: {
         if (isNaN(skill)){
             if (skill=="ATK"){
               if(this.player.atk<this.player.maxATK){
+                console.log(this.player.atk, 'atk player')
+                console.log(this.player.maxATK, 'maxATK')
                 this.player.atk = this.player.atk*1.2
               } else{ this.maxedATK=true }
             } else if (skill=="DEF"){
