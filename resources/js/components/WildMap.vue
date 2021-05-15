@@ -128,7 +128,7 @@ async getDeck(){
     Vue.set(pokemon, "HPBar", {width: '100%'})
     Vue.set(pokemon, "id", i)
     Vue.set(pokemon, "maxHP",  Deck.data[i].hp)
-    Vue.set(pokemon, "HPlimit", Deck.data[i]*1.2)
+    Vue.set(pokemon, "HPlimit", Deck.data[i].hp*1.2)
     Vue.set(pokemon, "maxATK",  Deck.data[i].atk*1.2)
     Vue.set(pokemon, "maxDEF",  Deck.data[i].def*1.2)
     //Vue.set(pokemon, "maxSPD",  Deck.data[i].spd*1.5)
